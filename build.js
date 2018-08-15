@@ -28,8 +28,8 @@ handlebars.registerHelper('each_upto', function(ary, max, options) {
 metalsmith(__dirname)
   .metadata({
     site: {
-      name: 'benps.com',
-      description: "Ben Plotkin-Swing"
+      name: 'Ben Plotkin-Swing',
+      description: "Ben Plotkin-Swing's website"
     }
   })
   .source('./src')
