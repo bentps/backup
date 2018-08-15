@@ -11,7 +11,11 @@ body {
 	font-family: Noto Sans, sans-serif;
 }
 
-.main,article{max-width:800px;margin:auto;padding:2em;}
+.main,article {
+  margin:auto;
+  padding:2em;
+  max-width:800px;
+}
 h1{text-align:center;}
 ul{list-style-type:none;}
 li{padding:1em;}
@@ -21,4 +25,11 @@ a:active, a:hover {color:#ffffff;}
 .subtitle-in-index{font-size:0.8em;font-style:italic;}
 .subtitle-in-article,.meta{font-style:italic;}
 .meta{font-size:0.9em;}
+
+
+
+/* For small screens */
+@media screen and (max-width:500px){
+  .main,article{max-width:100%;padding:1em}
+}
 
