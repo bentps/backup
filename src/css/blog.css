@@ -28,6 +28,7 @@ a:active, a:hover {color:#ffffff;}
 figure,img{display:block;margin:auto;max-width:100%;max-height:600px;}
 figure{max-width:90%;}
 figcaption{text-align:center;font-style:italic;font-weight:bold;font-size:0.9em;}
+figure.special,img.special{max-height:1400px!important;} /* an especially tall image*/
 .attribution{font-size:0.9em;font-style:italic;}
 blockquote{font-style:italic;}
 
