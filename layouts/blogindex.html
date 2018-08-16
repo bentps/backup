@@ -4,16 +4,16 @@
   <!-- Index -->
   <article id="index">
     <h3>About</h3>
-    <p>This is Ben's collection of musings about slacklining.</p>
+    <p>This is Ben's collection of musings about slacklining, climbing, and physics.</p>
     <br>
     <h3>Posts</h3>
     <ul class="recent">
     {{#each blog }}
       <li>
         <div class="title"><a href="{{ link }}">{{ title }}</a></div>
-        <div class="subtitle-in-index">{{ subtitle }}</div>
-        <!--<div class="date">{{ moment date lang="en" format="DD MMM[,] YYYY" }}</div>-->
+        <div class="date">Posted {{ moment date lang="en" format="DD MMM[,] YYYY" }}</div>
       </li>
+
     {{/each}}
     </ul>
   </article>
