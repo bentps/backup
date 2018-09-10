@@ -4,6 +4,7 @@ layout: blogpost.html
 link: "./outerspace-2012-09-12"
 title: "Outer Space 09-10-2012"
 date: 2012-09-12
+tags: trip report, climbing
 ---
 Hannah and I climbed Outer Space this Monday. It was super fun.
 

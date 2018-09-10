@@ -5,6 +5,7 @@ link: "./history-of-sag"
 title: "A History of Sag"
 date: 2016-12-11
 draft: false
+tags: physics, slacklining
 ---
 
 ### Slack revolution

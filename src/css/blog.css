@@ -5,6 +5,7 @@ html {
 body {
 	margin: 0px;
     background: #1DC07E;
+    /* alt websafe color: 33CC66; */
     color: #000000;
 	text-align: left;	
 	font-size: 100%;
@@ -16,6 +17,7 @@ body {
   padding:2em;
   max-width:800px;
 }
+.clear:after {content:"";display:table;clear:both;}
 h1{text-align:center;}
 h3{margin-top:1.5em;}
 ul{list-style-type:none;}
@@ -23,10 +25,66 @@ li{padding:1em;}
 a{text-decoration:underline;font-weight:bold;}
 a:link, a:visited {color:#000000;}
 a:active, a:hover {color:#ffffff;}
-.subtitle-in-index,.date{font-size:0.8em;font-style:italic;}
-.subtitle-in-article,.meta{font-style:italic;}
-.meta{font-size:0.9em;}
-figure,img{display:block;margin:auto;max-width:90%;max-height:600px;}
+.recent a,.back-to-list a,.categories a{text-decoration:none;}
+
+/* in the index */
+.subtitle-in-index,.date,.tags{font-size:0.8em;font-style:italic;}
+.subtitle-in-article{font-style:italic;}
+
+/* Slider css from w3 skoolz */
+.slidecontainer {display:block;width: 100%;padding:0.5em;}
+.slider {
+	cursor:pointer;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 4em;height: 1.8em;
+    border-radius:1em; background: #d3d3d3;
+    outline: none;
+    /*opacity: 0.8;
+    -webkit-transition: .2s; 
+    transition: opacity .2s;*/
+}
+/*.slider:hover {opacity: 1;}*/
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 2em; /* Set a specific slider handle width */
+    height: 2em; /* Slider handle height */
+    border-radius:1em; border:1px solid #0C5135;
+    background: #138355; /* Green background */
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+}
+.slider::-moz-range-thumb {
+    width: 2em; /* Set a specific slider handle width */
+    height: 2em; /* Slider handle height */
+    border-radius:1em; border:1px solid #0C5135;
+    background: #138355; /* Green background */
+}
+#slide-date,#slide-cat{font-variant:small-caps;font-size:1.3em;cursor:pointer;padding:0.5em;}
+.sort-unselected{font-weight:normal;opacity:0.5;}
+.sort-selected{font-weight:bold;opacity:1;}
+
+/* style for categories sort */
+.category{border:1px solid black;border-radius:0.5em;text-align:center;padding:0.2em;}
+.categories{display:none;padding-left:0;}
+.recent{display:block;}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}  
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+
+/* in the posts*/
+figure,img{display:block;margin:auto;max-height:600px;padding:0.5em;}
+figure{max-width:90%;}img{max-width:100%;}
 figcaption{text-align:center;font-style:italic;font-weight:bold;font-size:0.9em;}
 figure.special,img.special{max-height:1400px!important;} /* an especially tall image*/
 .attribution{font-size:0.9em;font-style:italic;}

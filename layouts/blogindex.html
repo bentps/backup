@@ -7,14 +7,24 @@
     <p>This is Ben's collection of musings about slacklining, climbing, and physics.</p>
     <br>
     <h3>Posts</h3>
+    <!-- Sort by chooser-->
+    <div class="sortby">Sort by:
+    <div class="slidecontainer">
+    <span id='slide-date' class='sort-unselected sort-selected'>date</span>
+    <input type="range" min="0" max="1" value="0" class="slider" id="sorter-slider">
+    <span id='slide-cat' class='sort-unselected'>category</span>
+    </div>
+    </div>
     <ul class="recent">
     {{#each blog }}
       <li>
         <div class="title"><a href="{{ link }}">{{ title }}</a></div>
-        <div class="date">Posted {{ moment date lang="en" format="DD MMM[,] YYYY" }}</div>
+        <div class="date">Posted {{ moment date lang="en" format="MMM DD[,] YYYY" }}</div>
+        <div class="tags">{{#if tags}}Tags: {{tags}}{{/if}}</div>
       </li>
 
     {{/each}}
     </ul>
+    <ul class="categories"></ul>
   </article>
 {{> footer }}

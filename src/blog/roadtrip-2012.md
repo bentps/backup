@@ -5,6 +5,7 @@ link: "./roadtrip-2012"
 title: "Roadtrip 2012: Yosemite climbing and highlining"
 date: 2012-07-22
 draft: false
+tags: trip report, highlining, climbing
 ---
 
 This trip report has turned into an epic, so let me say before I lose your attention: thank you to Sarah Shimer for lending us your Yosemite climbing guide! The book has grown a 6-pack like appendage, let me know how I can get it all back to you.

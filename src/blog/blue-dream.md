@@ -5,6 +5,7 @@ link: "./blue-dream"
 title: "Blue Dream"
 date: 2014-05-02
 draft: false
+tags: highlining
 ---
 <p style="font-style:italic">A little weary from my first crossing, I stand on the line and face the return journey. I start to make my way across the 220 feet of increasingly wet double type-18, but I’m still too tense and in the wrong frame of mind, and I fall and catch after only a few steps. No send on this effort either. Then, the thunder that I thought had passed roars again, and the rain starts to fall in earnest. As the drama of the elements increases, my internal struggle with nerves and over analysis fades away...</p>
 

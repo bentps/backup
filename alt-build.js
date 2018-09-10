@@ -40,22 +40,6 @@ metalsmith(__dirname)
     permalink_group: "posts",
     drafts: false,
     groups: [
-        {   group_name: "posts",
-            type: "post", //get all posts, exclude pages
-            path: "{date}/{num}/{title}", //creates paginated archives and permalinks
-            date_format: "YYYY/MM", //posts look like: /2017/01/post/index.html
-            date_page_layout: "index-year.ext/index-month.ext", //use one template for the year and another for the months,
-            num_format: "page/{num}", //archives look like /2017/01/page/2/index.html
-            per_page: 10,
-            add_prop: [{search: true}] //for use with a plugin later
-        },
-        {   group_name: "index",//for the home page
-            type: "post",//get all posts, exclude pages
-            page_layout: "index.ext",//use index template
-            path: "{num}",
-            num_format: "page/{num}", //home pages will look like: /page/2/index.html,  /page/3/index.html, and so on.
-            per_page:10,
-        },
         {   group_name: "tag"
             type: "post",//get all posts, exclude pages
             expose: "tags", //expose the tags property
