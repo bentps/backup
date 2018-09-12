@@ -67,6 +67,7 @@ a:active, a:hover {color:#ffffff;}
 #slide-date,#slide-cat{font-variant:small-caps;font-size:1.3em;cursor:pointer;padding:0.5em;}
 .sort-unselected{font-weight:normal;opacity:0.5;}
 .sort-selected{font-weight:bold;opacity:1;}
+#justinput{display:none;}
 
 /* style for categories sort */
 .category{border:1px solid black;border-radius:0.5em;text-align:center;padding:0.2em;}

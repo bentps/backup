@@ -1,14 +1,21 @@
 $(document).ready(function(){
 
 // Style date/category spans based on slider input and/or on click, if latter also slide slider appropriately
-$('#sorter-slider').on('input', function(){styleslider(2);return false;});
+$('#sorter-slider').on('input', function(){$('#justinput').addClass('justinput');});
+$('#sorter-slider').on('click', function(){
+  if ($('#justinput').hasClass('justinput')) {styleslider(2)}
+  else{styleslider(3);}
+  $('#justinput').removeClass('justinput');
+});
 $('#slide-date').on('click', function(){styleslider(0);datesort();});
 $('#slide-cat').on('click', function(){styleslider(1);catsort();});
 function styleslider(picked) {
-    if (picked == 2){var picked=$('#sorter-slider').val();}
-    else{$('#sorter-slider').val(picked)}
+    var current = $('#sorter-slider').val();
+    if (picked == 2){var picked=current;}
+    if (picked == 3){if (current == 1){var picked=0;}else{var picked=1;}}
+    $('#sorter-slider').val(picked);
     if (picked==1){$('#slide-date').removeClass('sort-selected');$('#slide-cat').addClass('sort-selected');catsort();}
-    else{$('#slide-cat').removeClass('sort-selected');$('#slide-date').addClass('sort-selected');datesort();}
+    if (picked==0){$('#slide-cat').removeClass('sort-selected');$('#slide-date').addClass('sort-selected');datesort();}
 }
 
 // utility function for title casing things
