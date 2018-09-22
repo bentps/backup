@@ -1,29 +1,34 @@
 $(document).ready(function(){
 
-// Style date/category spans based on slider input and/or on click, if latter also slide slider appropriately
-$('#sorter-slider').on('input', function(){$('#justinput').addClass('justinput');});
-$('#sorter-slider').on('click', function(){
-  if ($('#justinput').hasClass('justinput')) {styleslider(2)}
-  else{styleslider(3);}
-  $('#justinput').removeClass('justinput');
+// Sort posts and style date/category spans based on using lider
+$('#sorter-slider').on('input', function(){
+  var val=document.getElementById('sorter-slider').value;
+  styleslider(val);
 });
-$('#slide-date').on('click', function(){styleslider(0);datesort();});
-$('#slide-cat').on('click', function(){styleslider(1);catsort();});
+// Trigger style/sort/sliding fxn by clicking on date/cat spans
+$('#slide-date').on('click', function(){styleslider(0);});
+$('#slide-cat').on('click', function(){styleslider(1);});
+
+// Function to style the date/cat spans, slide the slider, and trigger the sorting functions
 function styleslider(picked) {
+  // Figure out what we picked to sort by
     var current = $('#sorter-slider').val();
     if (picked == 2){var picked=current;}
     if (picked == 3){if (current == 1){var picked=0;}else{var picked=1;}}
     $('#sorter-slider').val(picked);
+  // Based on what we picked, style spans and trigger sorting functions  
     if (picked==1){$('#slide-date').removeClass('sort-selected');$('#slide-cat').addClass('sort-selected');catsort();}
     if (picked==0){$('#slide-cat').removeClass('sort-selected');$('#slide-date').addClass('sort-selected');datesort();}
 }
 
-// utility function for title casing things
+
+// Utility function for title casing things
 function toTitleCase(str) {
     return str.replace(/(?:^|\s)\w/g, function(match) {
         return match.toUpperCase();
     });
 }
+
 
 // Make a list of all tags for sorting by category
 function gettags() {
@@ -40,14 +45,13 @@ function gettags() {
 }
   
   
-// Sort posts by category if toggled
+// Function to sort posts by category, then show these and hide the by-date sorting
 function catsort() {
-// check if categories have been figured out on this page-load yet. If not, figure them out
+  // If categories have not yet been figured out on this page-load, do so now
   if ($('ul.categories').find('li').length ==0){
-    //if ($('.categories').childNodes.length == 0) {
     // loop over categories
     var i;for (i = 0; i < gettags().length; i++) { 
-        // make a header for this category
+        // make a header element for this category
         var thisheader = (toTitleCase(gettags()[i]));
         $('.categories').append('<div id=' + i + '><h4 class="category" id="'+i+'">' + thisheader + '</h4></div>');
         //identify any posts that belong in this category
@@ -61,7 +65,7 @@ function catsort() {
         });
       }  
    }
-  // show categories list and hide by-date list
+  // Show categories list and hide by-date list
   $('.recent').css('display','none');
   $('.categories').css('display','block').css('-webkit-animation','fadeIn 1s').css('animation','fadeIn 1s');
   //$('.recent').hide();
@@ -69,7 +73,7 @@ function catsort() {
 }  
   
 
-// Re-display posts by date if toggled back and hide by-categories sorting
+// Function to re-display posts by date and hide the by-category sorting
 function datesort() {
   $('.categories').css('display','none');
   $('.recent').css('display','block').css('-webkit-animation','fadeIn 1s').css('animation','fadeIn 1s');
