@@ -1,21 +1,11 @@
 $(document).ready(function(){
 
-// Sort posts and style date/category spans based on using lider
-$('#sorter-slider').on('input', function(){
-  var val=document.getElementById('sorter-slider').value;
-  styleslider(val);
-});
-// Trigger style/sort/sliding fxn by clicking on date/cat spans
-$('#slide-date').on('click', function(){styleslider(0);});
-$('#slide-cat').on('click', function(){styleslider(1);});
+// Trigger style/sort fxn by clicking on date/cat spans
+$('#slide-date').on('click', function(){sortby(0);});
+$('#slide-cat').on('click', function(){sortby(1);});
 
 // Function to style the date/cat spans, slide the slider, and trigger the sorting functions
-function styleslider(picked) {
-  // Figure out what we picked to sort by
-    var current = $('#sorter-slider').val();
-    if (picked == 2){var picked=current;}
-    if (picked == 3){if (current == 1){var picked=0;}else{var picked=1;}}
-    $('#sorter-slider').val(picked);
+function sortby(picked) {
   // Based on what we picked, style spans and trigger sorting functions  
     if (picked==1){$('#slide-date').removeClass('sort-selected');$('#slide-cat').addClass('sort-selected');catsort();}
     if (picked==0){$('#slide-cat').removeClass('sort-selected');$('#slide-date').addClass('sort-selected');datesort();}
