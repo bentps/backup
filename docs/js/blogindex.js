@@ -91,5 +91,11 @@ function datesort() {
   $('.recent').css('display','block')
 }
 
+// On screen touch, add nouserselect class to more elements
+ window.addEventListener('touchstart', function onFirstTouch() {
+    $('.category h4').addClass('nouserselect')
+    $('.title').addClass('nouserselect')
+    window.removeEventListener('touchstart', onFirstTouch, false);
+  }, false);
 
 });

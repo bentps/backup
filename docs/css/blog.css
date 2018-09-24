@@ -1,7 +1,5 @@
-html {
-	overflow-y:auto;
-}
-
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:100%;}body{margin:0}
+html {overflow-y:auto;}
 body {
 	margin: 0px;
     background: #1DC07E;
@@ -79,11 +77,22 @@ figure.special,img.special{max-height:1400px!important;} /* an especially tall i
 .attribution{font-size:0.9em;font-style:italic;}
 blockquote{font-style:italic;}
 
+/* no selecting on certain elements*/
+.nouserselect{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 /* For small screens */
 @media screen and (max-width:600px){
   .main,article{max-width:100%;padding:0.5em}
   .categories,.recent{padding:1em 0.5em;}
-  .category{width:90%;margin:auto;}
+  .category{width:90%;margin:1.33em auto;}
   figure{max-width:100%;}
 }
 
