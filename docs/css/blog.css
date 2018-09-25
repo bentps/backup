@@ -31,7 +31,7 @@ a:active, a:hover {color:#ffffff;}
 
 /* sort-by looks*/
 #by-date,#by-cat{
-  font-variant:small-caps;font-size:1.3em;cursor:pointer;padding:0.5em 0.8em;
+  font-variant:small-caps;font-size:1.3em;padding:0.5em 0.8em;cursor:pointer;
 }
 .sortby{padding-bottom:0.2em;}
 .sort-unselected{font-weight:normal;opacity:0.5;}
@@ -67,7 +67,8 @@ a:active, a:hover {color:#ffffff;}
     from { opacity: 0; }
       to { opacity: 1; }
 }
-
+.sort-unselected:hover{color:white;opacity:1;}
+.sort-selected:hover{color:black;cursor:arrow;}
 
 /* in the posts*/
 figure,img{display:block;margin:auto;max-height:600px;padding:0.5em;}
